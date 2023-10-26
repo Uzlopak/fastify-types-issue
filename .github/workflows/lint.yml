@@ -1,0 +1,9 @@
+name: Lint on PR
+
+on: [pull_request]
+
+jobs:
+  lint:
+    uses: ./.github/workflows/_lint.yml
+    secrets:
+      githubToken: ${{ secrets.GITHUB_TOKEN }}

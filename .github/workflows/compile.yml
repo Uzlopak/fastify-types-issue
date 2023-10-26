@@ -1,0 +1,9 @@
+name: Compile on PR
+
+on: [pull_request]
+
+jobs:
+  compile:
+    uses: ./.github/workflows/_compile.yml
+    secrets:
+      githubToken: ${{ secrets.GITHUB_TOKEN }}

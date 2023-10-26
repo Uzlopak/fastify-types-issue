@@ -1,0 +1,61 @@
+{
+  "env": {
+    "browser": false,
+    "es6": true,
+    "node": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "require-sort"],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/recommended",
+    "plugin:import/typescript"
+  ],
+  "rules": {
+    "import/first": "error",
+    "array-callback-return": "error",
+    "no-constant-binary-expression": "error",
+    "require-atomic-updates": "error",
+    "eqeqeq": ["error", "smart"],
+    "arrow-body-style": ["error", "as-needed"],
+    "no-unused-vars": "off",
+    "no-console": "error",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "argsIgnorePattern": "^_", "destructuredArrayIgnorePattern": "^_" }
+    ],
+    "@typescript-eslint/no-explicit-any": "error",
+    "import/no-unresolved": ["error", { "commonjs": true }],
+    // Sort members within one import statement
+    "sort-imports": ["error", { "ignoreDeclarationSort": true }],
+    // Group and alphabetically sort import statements
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          ["builtin", "external"],
+          ["parent", "sibling"]
+        ],
+        "pathGroups": [
+          {
+            "pattern": "@monitr/**",
+            "group": "parent",
+            "position": "before"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["@monitr/**"],
+        "newlines-between": "always",
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": true
+        }
+      }
+    ]
+  }
+}

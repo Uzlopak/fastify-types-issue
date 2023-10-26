@@ -1,0 +1,8 @@
+# Ignore everything
+*
+
+# Whitelist files and folders with a pattern
+!src/**/*
+!package.json
+!package-lock.json
+!tsconfig.json

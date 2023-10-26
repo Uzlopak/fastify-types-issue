@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "target": "ES2020",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "outDir": "build",
+    "skipLibCheck": true,
+    "typeRoots": ["./node_modules/@types", "./src/typings"]
+  },
+  "include": ["src/**/*"],
+  "exclude": ["*.js"],
+  "lib": ["ES2020"]
+}
