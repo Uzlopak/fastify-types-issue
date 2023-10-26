@@ -11,7 +11,7 @@ const fastify = Fastify({
 })
 
 // Declare a route
-fastify.get(
+fastify.post(
   "/",
   {
     config: { rawBody: true },
