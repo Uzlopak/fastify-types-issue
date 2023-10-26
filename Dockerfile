@@ -1,4 +1,4 @@
-FROM node:18-alpine as BUILD
+FROM node:21-alpine as BUILD
 
 ARG GITHUB_TOKEN
 
@@ -27,7 +27,7 @@ RUN npm prune --production
 
 ################################################
 
-FROM node:18-alpine
+FROM node:21-alpine
 
 ENV NODE_ENV=production
 
